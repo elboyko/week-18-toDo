@@ -32,8 +32,17 @@ button {
    color: rgb(227, 153, 196);
 }
 
+button:disabled {
+   opacity: 0.5;
+}
+
 .btn-remove {
    width: 250px;
+}
+
+.btn-done {
+   width: 30px;
+   height: 30px;
 }
 
 .li {
@@ -56,5 +65,25 @@ button {
 }
 
 .remove {
-   display: none;
+   display: none !important;
+}
+
+.draw {
+   display: inline-block;
+}
+
+.df {
+   display: flex;
+   justify-content: space-between;
+   border: 1px solid grey;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+
+.red {
+   background-color: rgb(229, 31, 130);
+}
+
+.btn-done {
+   background-color: #fff;
 }
