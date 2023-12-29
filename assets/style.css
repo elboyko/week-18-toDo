@@ -80,10 +80,17 @@ button:disabled {
    margin-bottom: 10px;
 }
 
-.red {
-   background-color: rgb(229, 31, 130);
+.check {
+   transform: scale(1.5);
 }
 
 .btn-done {
    background-color: #fff;
+}
+
+.add-checked {
+   height: 20px;
+   width: 20px;
+   padding: 5px;
+   font-size: 18px;
 }

@@ -13,9 +13,7 @@ function addTask() {
    <li class="list-group-item df">
 					<span >${valueGet}</span>
 					<div class="div-btn">
-						<button class="btn-done" type="button" data-action="done" >
-							<img src="./img/tick.svg" alt="Done" width="18px" height="18px">
-						</button>
+						 <input class="add-checked" type="checkbox" name="" id="checkbox" >
 					</div>
 				</li>`;
    taskList.insertAdjacentHTML('beforeend', taskHtml);
@@ -40,12 +38,25 @@ function removeTask() {
 }
 
 
-
-//Отмечаем задачу завершенной
-
+// //Отмечаем задачу завершенной
 taskList.addEventListener('click', doneTask);
-function doneTask(event) {
+function doneTask(evt) {
+   if (evt.target.tagName === ('INPUT')) {
+      let inputs = document.querySelectorAll('.add-checked');
+      inputs.forEach((input) => {
+         console.log('выбран');
+         input.classList.toggle('check');
+      })
+   }
 
-   console.log('ghbdtn');
+   // или этот
+   // let inputs = document.querySelectorAll('.add-checked');
+   // inputs.forEach((input) => {
+   //    if (input.checked) {
+   //       console.log('выбран');
+   //       input.classList.toggle('check');
+   //    }
+   // })
 
 }
+
